@@ -1,7 +1,8 @@
-from flask import Flask
+from flask import Flask, render_template, request, session, redirect, flash, jsonify
 
 app = Flask(__name__)
 
 @app.route("/")
 def hello_world():
-    return "<p>Hello, World!</p>"
+    print("test")
+    return render_template("index.html")
