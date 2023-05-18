@@ -4,4 +4,5 @@ use this to activate the environment on CodeSpaces with bash
 running 'flask run' will work  but to have it update code on the fly you must run 
     flask --debug run
 this enables auto-reload
+
 seems I must run 'pip install flask' again
