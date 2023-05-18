@@ -1,0 +1,4 @@
+use this to activate the environment on CodeSpaces with bash
+    $ source .venv/Scripts/activate
+
+seems I must run 'pip install flask' again
