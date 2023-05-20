@@ -1,0 +1,24 @@
+{% extends 'template.html' %}
+{% block title %}Index{% endblock %}
+{% block head %}
+    {{ super() }}
+    <style type="text/css">
+        .important { color: #336699; }
+    </style>
+{% endblock %}
+
+{% block content %}
+  <h1>Index</h1>
+  <p class="important">important sign class here </p>
+  <h4>If you want to contact us you can with the detaisl and form below thank you.</h4>
+
+  <form method="post">
+    <label>First Name</label>
+    <input type="text" id="fname" required>
+    <label>Last Name</label>
+    <input type="text" id="lname" required>
+    <label>Details</label>
+    <input type="text" id="details">
+    <input type="submit" value="Send">
+  </form>
+{% endblock %}
