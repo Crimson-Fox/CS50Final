@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, session, redirect, flash, jsonify
+from flask import Flask, render_template, request, session, redirect, flash, jsonify # pylint: disable=unused-import
 
 app = Flask(__name__)
 
