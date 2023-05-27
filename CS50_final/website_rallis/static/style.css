@@ -16,3 +16,8 @@ img-fluid {
     background-color: rgb(103, 123, 150);
     color: aliceblue;
 }
+.galleryX{
+    width: 100%;
+    height: 450px;    
+    object-fit: cover;
+}
