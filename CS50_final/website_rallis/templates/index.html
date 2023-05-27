@@ -2,44 +2,52 @@
 {% block title %}Index{% endblock %}
 {% block head %}
     {{ super() }}
-    <style type="text/css">
-        .important { color: #336699; }
-    </style>
+
 {% endblock %}
 
 {% block content %}
+<div class="container-fluid p-0"><img class="img-fluid height-200" src="/static/sl2.jpg"></div>
 
-<p class="important mt-2">This is a important message </p>
-<div class="container mt-2">
+</div>
+<!--<div class="container"><p class="important mt-2">This is a important message </p></div>-->
+<div class="container mt-4"> <!-- card selection -->
   <div class="row text-center g-2">
-    <div class="col px-0">
-      <a href="#"><img src="/static/temp_crop.jpg" class="rounded "></a>
-      <h6>PlaceholderText</h6>
+    <div class="col-md ">
+      <a href="#"><img src="/static/timberStack.jpg" class="rounded content_thumb"></a>
+      <h6>Available Timber Species</h6>
     </div>
-    <div class="col">
-      <a href="#"><img src="/static/temp_crop.jpg" class="rounded "></a>
-      <h6>PlaceholderText</h6>
+    <div class="col-md ">
+      <a href="#"><img src="/static/temp_crop.jpg" class="rounded content_thumb"></a>
+      <h6>Treated Pine</h6>
     </div>
-    <div class="col">
-      <a href="#"><img src="/static/temp_crop.jpg" class="rounded "></a>
-      <h6>PlaceholderText</h6>
+    <div class="col-md ">
+      <a href="#"><img src="/static/mouldings.jpg" class="rounded content_thumb"></a>
+      <h6>Mouldings</h6>
     </div>
-    <div class="col">
-      <a href="#"><img src="/static/temp_crop.jpg" class="rounded "></a>
-      <h6>PlaceholderText</h6>
+    <div class="w-100"></div>
+    <div class="col-md ">
+      <a href="#"><img src="/static/sheets.jpg" class="rounded content_thumb"></a>
+      <h6>Sheets</h6>
+    </div>
+    <div class="col-md ">
+      <a href="#"><img src="/static/sheets.jpg" class="rounded content_thumb"></a>
+      <h6>Doors</h6>
+    </div>
+    <div class="col-md ">
+      <a href="#"><img src="/static/sheets.jpg" class="rounded content_thumb"></a>
+      <h6>Specialities</h6>
     </div>
 
   </div>
 </div>
-  <div class="container-fluid">
+  <div class="container-fluid mt-4">
     <h3>Timber & Building Supplies in Sydney</h3>
     <div class="row">
-      <div class="col col-md-8">
+      <div class="col-md">
         <p>Rallis Timber is a family run business trading since 1982 founded by the late George Andrianakos and his three sons Hercules, Chris & Bill.Rallis Timber is a traditional timber merchant based at 21 Marrickville Road Marrickville 2204 in the city’s inner west. We provide an old fashion personalised service with expert assistance for your timber & building needs.We specialise in the ability to match your old skirtings, architraves, or other mouldings you may require to be able to restore your house sympathetic to the period in which it was built.</p>
-        
       </div>
-      <div class="col">
-        <div class="container-fluid">
+      <div class="col-md-5">
+        <div class="container-fluid rounded infoBubble shadow-sm px-3 py-2 b-10">
           We also specialize in the supply of Structural framing LVL’s, Treated Pine & WRC Cladding. A selection of timber flooring, decking and all types of external timbers for constructing decks, pergolas, privacy screening, etc.
       
           Most sheet products are available by Rallis Timber which can be cut to size by our professional team.
