@@ -6,11 +6,60 @@
 {% endblock %}
 
 {% block content %}
+<!--https://getbootstrap.com/docs/5.3/components/offcanvas/#static-backdrop-->
+<div class="offcanvas offcanvas-start" data-bs-backdrop="#offcanvasWithBothOptions" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
+  <div class="offcanvas-header">
+    <h2 class="offcanvas-title" id="staticBackdropLabel">Online Enquiry</h2>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body pt-4">
+    <h5>If you wish to contact us you can with the details and form below thank you.</h5>
+    <form method="post">
+      <div class="mb-3">
+        <label>First Name</label>
+        <input class="form-control"type="text" id="fname" required placeholder="John">
+      </div>
+      <div class="mb-3">
+        <label>Last Name</label>
+        <input class="form-control"type="text" id="lname" required placeholder="Smith">
+      </div>
+      <div class="mb-3">
+        <label>Email</label>
+        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+      </div>
+      <div class="mb-3">
+        <label>Details</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Please Enter description "></textarea>
+      </div>
+      <div class="mb-3">
+        <label for="formFile" class="form-label">Upload examples</label>
+        <input class="form-control" type="file" id="formFile">
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    <div class="mt-2">
+      <h4>Contact Information</h4>
+      <h6>Rallis Timber Pty Ltd</h6>
+        <p>21-29 Marrickville Rd,<br> Marrickville NSW 2204</p>
+        <p>Phone: (02)9557 5037<br>Email: sales@rallistimber.com.au</p>
+      <h5>Opening Hours</h5>
+        <p>Monday to Friday 7:30am - 4:30pm <br>Saturday 7:30am - 12.00pm</p>
+      <h5>Socials</h5>
+        <img src="http://placehold.it/65x65" alt="Dummy Image" />
+        <img src="http://placehold.it/65x65" alt="Dummy Image" />
+        <img src="http://placehold.it/65x65" alt="Dummy Image" />
+        <img src="http://placehold.it/65x65" alt="Dummy Image" />
+    </div>
+  </div>
+</div>
+
+
+
 <div class="bg-image" style="background-image: url('/static/sl2.jpg'); height: 20vh; background-position: center; background-repeat: no-repeat;">
   <div class="container text-center" style="height: 100%;">
     <div class="row align-items-center"style="height: 100%;">
       <div class="" >
-        <a class="btn btn-lg center btn-primary py-2 mx-2">Online Quote</button>
+        <a class="btn btn-lg center btn-primary py-2 mx-2" data-bs-toggle="offcanvas"  data-bs-target="#staticBackdrop" >Online Quote</button>
         <a class="btn btn-lg btn-primary  py-2 mx-2" href="/contactus" role="button">Call Now</a>
       </div>
     </div>
@@ -21,7 +70,7 @@
 <div class="container mt-4"> <!-- card selection -->
   <div class="row text-center g-2">
     <div class="col-md ">
-      <a href="#"><img src="/static/timberStack.jpg" class="rounded content_thumb"></a>
+      <a href="/timber"><img src="/static/timberStack.jpg" class="rounded content_thumb"></a>
       <h6>Available Timber Species</h6>
     </div>
     <div class="col-md ">
@@ -34,39 +83,48 @@
     </div>
     <div class="w-100"></div>
     <div class="col-md ">
-      <a href="#"><img src="/static/sheets.jpg" class="rounded content_thumb"></a>
+      <a href="sheets"><img src="/static/sheets.jpg" class="rounded content_thumb"></a>
       <h6>Sheets</h6>
     </div>
     <div class="col-md ">
-      <a href="#"><img src="/static/doors.jpg" class="rounded content_thumb"></a>
+      <a href="/doors"><img src="/static/doors.jpg" class="rounded content_thumb"></a>
       <h6>Doors</h6>
     </div>
     <div class="col-md ">
-      <a href="#"><img src="/static/working.jpg" class="rounded content_thumb"></a>
+      <a href="/services"><img src="/static/working.jpg" class="rounded content_thumb"></a>
       <h6>Specialities</h6>
     </div>
 
   </div>
+</div>
+<div class="alert alert-primary" role="alert">
+  DELIVERY - We supply across all of NSW both citywide and regional towns
 </div>
   <div class="container-fluid px-4 mt-4">
     <div class="px-2"> <h3>Who we are</h3></div>
     <div class="row">
       <div class="col-md">
         <p>Rallis Timber is a family run business trading since 1982 founded by the late George Andrianakos and his three sons Hercules, Chris & Bill.Rallis Timber is a traditional timber merchant based at 21 Marrickville Road Marrickville 2204 in the city’s inner west. We provide an old fashion personalised service with expert assistance for your timber & building needs.We specialise in the ability to match your old skirtings, architraves, or other mouldings you may require to be able to restore your house sympathetic to the period in which it was built.</p>
+        <p>RALLIS TIMBER IS ONE OF SYDNEY’S LEADING TIMBER SUPPLIERS.</p>
+        <p>Our commitment to our clients is competitive prices, and quality timber which has helped establish our reputation as one of the preferred online store for timber supplies. Buy wholesale timber direct from Sydney’s biggest yard.</p>
       </div>
       <div class="col-md-5">
         <div class="container-fluid rounded infoBubble shadow-sm px-3 py-2 b-10">
-          We specialize in the supply of Structural framing LVL’s, Treated Pine & WRC Cladding. A selection of timber flooring, decking and all types of external timbers for constructing decks, pergolas, privacy screening, etc.
-      
-          Most sheet products are available by Rallis Timber which can be cut to size by our professional team.
-          
-          With our fleet of four trucks on the road, a quick and efficient delivery service is provided to you covering the metropolitan area and across New South Wales.</div>
+          <p>We specialize in the supply of Structural framing LVL’s, Treated Pine & WRC Cladding. A selection of timber flooring, decking and all types of external timbers for constructing decks, pergolas, privacy screening, etc.<br>Most sheet products are available by Rallis Timber which can be cut to size by our professional team.</p>
+          <p>With our fleet of four trucks on the road, a quick and efficient delivery service is provided to you covering the metropolitan area and across New South Wales.</p>
+        </div>
     
         </div>
     </div>
+    <row>
+      <h4>NSW TIMBER IS ONE OF SYDNEY’S LEADING TIMBER SUPPLIERS.</h4>
+      <p>For years we have been bulk timber suppliers for building and construction products including cladding, decking, flooring, fixings, and fasteners. Based in Sydney, our facility is well-equipped with state-of-the-art machines needed for the processing of both softwoods and hardwood timber. Our large stock of local timber enables us to offer you short lead times as well as numerous options for your projects.
+
+        Our commitment to our clients is competitive prices, and quality timber which has helped establish our reputation as one of the preferred online store for timber supplies. Buy wholesale timber direct from Sydney’s biggest yard.</p>
+    </row>
     <div class="row pt-4">
       <div class="col-md p-2">
-        <img src="/static/whoweare.jpg" class="rounded galleryX">
+        <img src="/static/whoweare.jpg" class="rounded galleryX" style="max-width:100%;">
       </div>
       <div class="col-md p-2">
         <img src="/static/people.jpg" class="rounded galleryX">
@@ -74,4 +132,21 @@
     </div>
   </div>
 
+  <div class="container pt-4">
+    <div class="row">
+      <div class="col">
+        <h3>Leading Timber Suppliers In Sydney</h3>
+        <p>We are top-rated suppliers of timber in Sydney, so when you work with us, you get more than just a timber yard. You also get our guarantee to provide the right product at the right price, allowing you to focus on what you do best: developing and expanding your organisation.
+        </p>
+        <p>
+          We have been providing large quantities of timber for building and construction items, including cladding, decking, flooring, fixings, and fasteners for decades. Our Sydney-based plant is fully furnished with the most recent machinery required for processing both softwood and hardwood timber. We can provide you with quick lead times and a wide range of alternatives for your projects, thanks to our substantial local timber yard Sydney stock.
+        </p>
+      </div>
+      <div class="col-md me-5">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3311.023469875422!2d151.16166287737485!3d-33.914795521445534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12b05e2286aae1%3A0x5888eefe42cda888!2sRallis%20Timber%20Pty%20Ltd!5e0!3m2!1sen!2sau!4v1686922865206!5m2!1sen!2sau" width="425" height="425" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="mb-2 float-end"></iframe>
+      </div>
+    </div>
+    
+  </div>
+    
 {% endblock %}
