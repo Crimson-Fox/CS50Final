@@ -62,3 +62,9 @@ def specialties():
     '''this will be the suploers route'''
     print("specialtiesPage")
     return render_template("/specialties.html")
+
+@app.route("/treated-pine-lvl")
+def treatedpinelvl():
+    '''this will be the suploers route'''
+    print("specialtiesPage")
+    return render_template("/treated-pine-lvl.html")
