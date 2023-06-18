@@ -1,17 +1,53 @@
 from flask import Flask, render_template, request, session, redirect, flash, jsonify # pylint: disable=unused-import
+import sqlite3
 
 app = Flask(__name__)
 
+con = sqlite3.connect("enquiries.db", check_same_thread=False)
+cur = con.cursor()
 
 @app.route("/", methods = ['POST','GET'])
 def index():
+    if request.method == 'POST':
+        fname = request.form.get("fname")
+        lname = request.form.get("lname")
+        email = request.form.get("email")
+        details = request.form.get("details")
+        if not fname:
+           return render_template("/index.html")
+        if not lname:
+            return render_template("/index.html")
+        if not email:
+            return render_template("/index.html")
+        if not details:
+            return render_template("/index.html")
+        print("POST")
+        cur.execute("INSERT INTO enquiries VALUES(?,?,?,?)",[ fname, lname, email, details])
+        con.commit()
+        return render_template("/index.html")
     '''this will be the index route'''
-    print("Index")
+    print("GET")
     return render_template("/index.html")
 
 @app.route("/contactus", methods = ['POST','GET'])
 def contactus():
-    '''this will be the index route'''
+    if request.method == 'POST':
+        fname = request.form.get("fname")
+        lname = request.form.get("lname")
+        email = request.form.get("email")
+        details = request.form.get("details")
+        if not fname:
+            return render_template("/index.html")
+        if not lname:
+            return render_template("/index.html")
+        if not email:
+            return render_template("/index.html")
+        if not details:
+            return render_template("/index.html")
+        print("POST")
+        cur.execute("INSERT INTO enquiries VALUES(?,?,?,?)",[ fname, lname, email, details])
+        con.commit()
+        return render_template("/index.html")
     print("contact Page")
     return render_template("/contactus.html")
 

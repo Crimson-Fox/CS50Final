@@ -17,23 +17,23 @@
     <form method="post">
       <div class="mb-3">
         <label>First Name</label>
-        <input class="form-control"type="text" id="fname" required placeholder="John">
+        <input class="form-control"type="text" id="fname" name="fname" required placeholder="John">
       </div>
       <div class="mb-3">
         <label>Last Name</label>
-        <input class="form-control"type="text" id="lname" required placeholder="Smith">
+        <input class="form-control"type="text" id="lname" name="lname" required placeholder="Smith">
       </div>
       <div class="mb-3">
         <label>Email</label>
-        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+        <input type="email" class="form-control" id="email" name="email" required placeholder="name@example.com">
       </div>
       <div class="mb-3">
         <label>Details</label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Please Enter description "></textarea>
+        <textarea class="form-control" id="details" name="details" rows="3" required placeholder="Please Enter description "></textarea>
       </div>
       <div class="mb-3">
         <label for="formFile" class="form-label">Upload examples</label>
-        <input class="form-control" type="file" id="formFile">
+        <input class="form-control" type="file" id="formFile" name="fileupload">
       </div>
       <button type="submit" class="btn btn-primary">Submit</button>
     </form>

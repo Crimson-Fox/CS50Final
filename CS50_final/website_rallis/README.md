@@ -17,3 +17,4 @@ Some aspects of websites that would be nice to have are:
 - have a nice side bar quote menu
 - find a nice way to render the website design wise
 - thumbnails to click on
+- file submission insight (a little out of scope, button there working no backend)
